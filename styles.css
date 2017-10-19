@@ -32,11 +32,6 @@ p {
   text-align: left;
 }
 
-p leg {
-  color: #e6e6e6;
-  text-transform: uppercase;
-}
-
 /* Create a position for the map on the page */
 #map {
   position: absolute;
