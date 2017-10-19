@@ -13,10 +13,10 @@ var map = new mapboxgl.Map({
 map.on('load', function() {	// the event listener that does some code after the map loads
 	
 	// the categories we created from the cville-parks map layer
-	var layers = [		'Buildings', 'Residential Buildings (Occupied)', 'Residential Lots (Vacant)',];
+	var layers = [		'BUILDINGS', 'RESIDENTIAL BUILDINGS (Occupied)', 'RESIDENTIAL LOTS (Vacant)',];
 	
 	// the colors we chose to style the parks on the map for each category
-	var colors = ['#B88100', '#F0D699', '#433C32',];
+	var colors = ['#B88100', '#F1C406', '#433225',];
 	
 	// add a legend to the map
 	for (i = 0; i < layers.length; i++) {
@@ -41,9 +41,9 @@ map.on('load', function() {	// the event listener that does some code after the 
 	  });
 
 	  if (homes.length > 0) {	// if statement to make sure the following code is only added to the info window if the mouse moves over a state
-	    document.getElementById('pd').innerHTML = '<h3> ' + homes[0].properties.walktime + ' than a 5-minute walk</h3>';
+	    document.getElementById('pd').innerHTML = '<h3>&rarr;<i> ' + homes[0].properties.walktime + ' than 5 minutes walking</i></h3>';
 	  } else {
-	    document.getElementById('pd').innerHTML = '<p>Hover over a home to see its access to Mill Creek Park.</p>';
+	    document.getElementById('pd').innerHTML = '<h4>&rarr; Hover over a residence to see its access to Mill Creek Park.</h4>';
 	  }
 	});
 

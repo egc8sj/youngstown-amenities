@@ -3,18 +3,38 @@ body {
   padding: 0;
 }
 
-h2,
-h3 {
+h2 {
   font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  color: #144b66;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 h3 {
   font-size: 1em;
+  font-weight: normal;
+  color: #144b66;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 1em;  
 }
 
 p {
   font-size: 0.85em;
   text-align: left;
+}
+
+p leg {
+  color: #e6e6e6;
+  text-transform: uppercase;
 }
 
 /* Create a position for the map on the page */
@@ -28,10 +48,8 @@ p {
 /* Set rules for how the map overlays (info box and legend) will be displayed on the page. */
 .map-overlay {
   position: absolute;
-  bottom: 0;
-  right: 0;
   background: rgba(255, 255, 255, 0.8);
-  margin-right: 20px;
+  margin-left: : 20px;
   font-family: Roboto, sans-serif;
   overflow: auto;
   border-radius: 3px;
@@ -39,19 +57,22 @@ p {
 
 #features {
   top: 0;
-  height: 250px;
-  margin-top: 20px;
-  width: 350px;
+  height: 78px;
+  width: 100%;
   padding: 15px;
 }
 
 #legend {
+  bottom: 0;
+  left: 0;
   padding: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   line-height: 18px;
-  height: 100px;
-  margin-bottom: 40px;
-  width: 200px;
+  margin: 40px;
+  background: rgba(77, 77, 77, .8);
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: #666666;
 }
 
 .legend-key {
@@ -60,6 +81,7 @@ p {
   width: 10px;
   height: 10px;
   margin-right: 5px;
+  font-color: #e6e6e6;
 }
 
 /* Modals */
@@ -89,7 +111,7 @@ p {
 }
 
 .modal .close-button {
-	color: #ccc;
+	color: #144b66;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -102,7 +124,7 @@ p {
 }
 
 .modal .close-button:hover { 
-	color: #bbb;
+	color: #12435b;
 }
 
 
@@ -131,18 +153,21 @@ p {
 .button-default {
     position: absolute;
     margin: 20px;
-    background: blue;
-    color: white;
+    top: 0;
+    right: 0;
+    background: rgba(20, 75, 102, .75);
+    color: #e6e6e6;
     border: none;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 10px 20px;
-    font-size: larger;
+    font-size: small;
     font-family: Roboto;
+    font-style: italic;
     cursor: pointer;    
 }
 
 .button-default:hover {
-    background: darkblue;
+    background: rgba(16, 60, 81, .75);
 }
 
 .button-default:active {
