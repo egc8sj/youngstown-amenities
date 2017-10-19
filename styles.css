@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.85em;
+  text-align: left;
+}
+
+/* Create a position for the map on the page */
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Set rules for how the map overlays (info box and legend) will be displayed on the page. */
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family: Roboto, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#features {
+  top: 0;
+  height: 250px;
+  margin-top: 20px;
+  width: 350px;
+  padding: 15px;
+}
+
+#legend {
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  height: 100px;
+  margin-bottom: 40px;
+  width: 200px;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 100%;  /* adds a border radius, a value of 100% changes a box to a circle */
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+/* Modals */
+#screen {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: black;
+	opacity: 0.6;
+	z-index: 1;
+}
+
+.modal {
+	display: none;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 150px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    padding: 30px;
+    font-family: Roboto;
+}
+
+.modal .close-button {
+	color: #ccc;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 10px;
+	line-height: 30px;
+	font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.modal .close-button:hover { 
+	color: #bbb;
+}
+
+
+
+/* Pop-ups */
+
+.mapboxgl-popup-tip {
+	border-top-color: blue !important;  /* the triangular shape at the bottom of the popup (tooltip) is formed by a thick border, where only the top border has a color, and the left, right, and bottom borders are transparent. Read more at https://css-tricks.com/snippets/css/css-triangle/ */
+}
+
+.mapboxgl-popup-content { 
+	background-color: rgba(135, 206, 250, 0.9);
+    border: 1px solid blue;
+    box-shadow: 3px 3px 8px rgba(0, 56, 125, 0.4);    
+    font-family: Roboto;
+    font-size: larger;
+    color: blue;
+}
+
+.mapboxgl-popup-close-button {
+    font-size: 30px;
+    color: blue;
+}
+
+/* About this Map Button */
+.button-default {
+    position: absolute;
+    margin: 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: larger;
+    font-family: Roboto;
+    cursor: pointer;    
+}
+
+.button-default:hover {
+    background: darkblue;
+}
+
+.button-default:active {
+    background: black;
+}
